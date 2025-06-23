@@ -1,0 +1,251 @@
+/* ===== COMING SOON PAGE ===== */
+.coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 6rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, 
+    rgba(8, 18, 27, 0.95) 0%, 
+    rgba(12, 26, 39, 0.9) 50%, 
+    rgba(16, 34, 51, 0.85) 100%);
+}
+
+.coming-soon-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.coming-soon i {
+  font-size: 4rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.coming-soon h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-white);
+}
+
+.coming-soon p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.countdown-container {
+  margin: 3rem 0;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  padding: 1.5rem 1rem;
+  min-width: 120px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.countdown-item span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.countdown-item small {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== BACK HOME BUTTON ===== */
+.back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.95rem;
+  color: var(--text-white);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: var(--transition);
+  margin-top: 1rem;
+}
+
+.back-home-btn i {
+  font-size: 0.9rem;
+  margin: 0;
+  color: inherit;
+}
+
+.back-home-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .coming-soon {
+    padding: 4rem 0;
+  }
+  
+  .countdown {
+    gap: 1rem;
+  }
+  
+  .countdown-item {
+    min-width: 80px;
+    padding: 1rem 0.5rem;
+  }
+  
+  .countdown-item span {
+    font-size: 2rem;
+  }
+  
+  .back-home-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.footer {
+  background-color: #0C1A27;
+  color: #FFFFFF;
+  padding: 4rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer-col {
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  height: 40px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-about {
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer-title {
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+}
+
+.footer-links li, .contact-info li {
+  margin-bottom: 0.8rem;
+  list-style: none;
+}
+
+.footer-links a, .contact-info li {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+  padding-left: 5px;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #E74C3C;
+  transform: translateY(-3px);
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.legal-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legal-links a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
