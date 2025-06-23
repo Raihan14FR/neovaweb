@@ -3,6 +3,8 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+  margin-top: -80px; /* Counteract navbar height */
+  padding-top: 80px; /* Ensure content isn't hidden behind navbar */
 }
 
 .video-container {
@@ -29,75 +31,66 @@
   background: linear-gradient(90deg, rgba(12, 26, 39, 0.9) 0%, rgba(12, 26, 39, 0.7) 100%);
 }
 
-.about-hero .hero-content {
+.hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  max-width: 90%;
-  width: 100%;
+  width: 90%;
+  max-width: 1200px;
   text-align: center;
   padding: 0 20px;
   z-index: 2;
 }
 
-.about-hero .hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
-.about-hero .hero-content p {
-  font-size: 1.2rem;
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.6;
   margin: 0 auto;
   max-width: 600px;
 }
 
-/* Mobile Responsiveness */
+/* ===== MOBILE RESPONSIVENESS ===== */
 @media (max-width: 768px) {
-  .about-hero .hero-content {
+  .about-hero {
+    height: 90vh;
+    margin-top: -60px;
+    padding-top: 60px;
+  }
+  
+  .hero-content {
     padding: 0 15px;
+    width: 95%;
   }
   
-  .about-hero .hero-content h1 {
-    font-size: 2rem !important;
+  .hero-content h1 {
+    font-size: 1.8rem !important;
+    margin-bottom: 0.8rem !important;
   }
   
-  .about-hero .hero-content p {
-    font-size: 1rem;
+  .hero-content p {
+    font-size: 1rem !important;
   }
 }
 
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  color: white;
-  max-width: 600px;
-  z-index: 2;
-}
-
-/* Remove default margin from heading and paragraph */
-.hero-content h1,
-.hero-content p {
-  margin: 0;
-  padding: 0;
-}
-
-.hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 1rem !important;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem !important;
+    letter-spacing: 2px;
+  }
+  
+  .hero-content p {
+    font-size: 0.9rem !important;
+  }
 }
 
 /* Brand Introduction */
